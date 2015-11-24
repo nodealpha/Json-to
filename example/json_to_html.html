@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Json to HTML</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div id="Target"></div>
+	<script type="text/javascript" src="../lib/json_to.js"></script>
+	<script type="text/javascript">
+		var json = {
+			number : 1,
+			string : 'Shankar',
+			object : {
+				number : 1,
+				array : [
+					"array object"
+				]
+			},
+			bool: true
+		};
+
+		var jsonTo = new JsonTo({
+			json: json,
+			target: document.getElementById('Target')
+		});
+
+		jsonTo.toHtml();
+	</script>
+</body>
+</html>
